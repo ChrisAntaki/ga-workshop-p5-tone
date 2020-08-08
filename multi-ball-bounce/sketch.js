@@ -49,7 +49,6 @@ function draw() {
     }
 
     if (ball.xPos > width - radius || ball.xPos < radius) {
-      console.log(111);
       handleCollision();
       ball.xSpeed *= -1;
     }
@@ -68,7 +67,6 @@ function handleCollision() {
 
   // choose a random note from the scale
   randomNote = int(random(0, AMinorScale.length));
-  // console.log(randomNote);
 
   // play the random note
   synth.triggerAttackRelease(AMinorScale[randomNote], "16n");
